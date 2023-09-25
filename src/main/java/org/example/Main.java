@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        int passwordLength = 12; // Ändere die Länge nach Bedarf
+        int passwordLength = 12;
         String securePassword = PasswordGenerator.generateSecurePassword(passwordLength);
         System.out.println("Generiertes sicheres Passwort: " + securePassword);
 
