@@ -12,18 +12,30 @@ class MainTest {
         //WHEN
         boolean actual = Main.checkPasswordLength(password);
         //THEN
-        Boolean expected = true;
+        boolean expected = true;
         assertTrue(expected);
     }
 
+    @Test
     void checkPasswordLength_ifPasswordLengthIsSmaller8_thenReturnFalse() {
         // GIVEN
         String password  = "pass12";
         //WHEN
         boolean actual = Main.checkPasswordLength(password);
         //THEN
-        Boolean expected = false;
-        assertEquals(expected, actual);
+        boolean expected = false;
+        assertFalse(expected);
     }
 
+    @Test
+    void checkPasswordForNumbers_ifPasswordContainsNumbers_thenReturnTrue(){
+        //GIVEN
+        String password = "pass12";
+        //WHEN
+        boolean actual = Main.checkPasswordForNumbers(password);
+        //THEN
+        boolean expected = true;
+        assertTrue(expected);
+
+    }
 }
